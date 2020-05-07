@@ -31,7 +31,7 @@ else
 fi
 
 read -p "Enter Use Mobile Number : " mobileNumber
-mobileNumberPattern="^[91][: :][1-9]{1}[0-9]{9}$"
+mobileNumberPattern="^[0-9]{1,2}[\ ][1-9]{1}[0-9]{9}$"
 
 if [[ $mobileNumber =~ $mobileNumberPattern ]]
 then
