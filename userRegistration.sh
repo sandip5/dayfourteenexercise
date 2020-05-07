@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 read -p "Enter User First Name : " firstName
-firstNamePattern="^[A-Z][a-z]{2,}$"
+firstNamePattern="^[A-Z][a-z]*$"
 
 if [[ $firstName =~ $firstNamePattern ]]
 then
