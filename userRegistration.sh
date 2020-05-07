@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 read -p "Enter User First Name : " firstName
-firstNamePattern="^[A-Z][a-z]*$"
+firstNamePattern="^[A-Z]{1}[a-z]{2,}$"
 
 if [[ $firstName =~ $firstNamePattern ]]
 then
@@ -11,7 +11,7 @@ else
 fi
 
 read -p "Enter User Last Name : " lastName
-lastNamePattern="[A-z][a-z]{2,}$"
+lastNamePattern="^[A-Z]{1}[a-z]{2,}$"
 
 if [[ $lastName =~ $lastNamePattern ]]
 then
@@ -41,7 +41,7 @@ else
 fi
 
 read -p "Enter User Password : " password
-passwordPattern="^[a-zA-Z]{8}$"
+passwordPattern="^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8}$"
 
 if [[ $password =~ $passwordPattern ]]
 then
